@@ -4,8 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Manager</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>Hey Working</h1>
+    <%- include("partials/header") %>
+    <main>
+      <div class="linksSec">
+        <a href="" class="loginPageLink">Login</a>
+        <a href="" class="signUpPageLink">SignUp</a>
+      </div>
+      <div class="displaySecOfLinks">
+        <p class="displayPara">A Place Where you can store your passwords</p>
+        <div class="loginForm">
+          <form action="">
+            <input
+              class="inputEmail"
+              type="text"
+              placeholder="Enter Your Email"
+            />
+            <input
+              class="inputPassword"
+              type="password"
+              placeholder="Enter Password"
+            />
+            <input class="submitBtn" type="submit" value="Login" />
+          </form>
+        </div>
+        <div class="signUpForm">
+          <form action="">
+            <input
+              class="inputEmail"
+              type="text"
+              placeholder="Enter Your Username"
+            />
+            <input
+              class="inputEmail"
+              type="email"
+              placeholder="Enter Your Email"
+            />
+            <input
+              class="inputPassword"
+              type="password"
+              placeholder="Enter Password"
+            />
+            <input class="submitBtn" type="submit" value="Sign Up" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include("partials/footer") %>
+
+    <script src="/javascripts/links.js"></script>
   </body>
 </html>
