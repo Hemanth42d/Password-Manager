@@ -1,0 +1,28 @@
+{
+  "name": "passwordmanager",
+  "version": "1.0.0",
+  "description": "An application for storing the passwords of some of the websites login details",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemanth42d/Password-Manager.git"
+  },
+  "author": "M.V.Hemanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hemanth42d/Password-Manager/issues"
+  },
+  "homepage": "https://github.com/Hemanth42d/Password-Manager#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "config": "^3.3.12",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2"
+  }
+}
