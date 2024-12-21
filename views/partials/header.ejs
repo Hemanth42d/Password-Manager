@@ -1,10 +1,3 @@
-<header>
-  <div class="logo">
-    <img src="/images/logo.png" alt="logo" />
-    <p class="logoName">Password Manager</p>
-  </div>
-</header>
-
 <style>
   header {
     max-height: 15%;
@@ -22,8 +15,24 @@
 
   .logo img {
     height: 10vh;
+    border-radius: 50%;
   }
   .logoName {
     font-size: 1.8rem;
   }
+  @media screen and (max-width: 320px) {
+    .logoName {
+      font-size: 1.4rem;
+    }
+    .logo img {
+      height: 8vh;
+    }
+  }
 </style>
+
+<header>
+  <div class="logo">
+    <img src="/images/logo2.png" alt="logo" />
+    <p class="logoName">Password Manager</p>
+  </div>
+</header>

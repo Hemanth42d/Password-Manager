@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <script
+      src="https://kit.fontawesome.com/f46158d183.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+    <main>
+      <div class="leftNav">
+        <ul>
+          <li>
+            <a href=""
+              ><img
+                class="images"
+                src="/images/password-book.png"
+                alt="password-image"
+            /></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/add.png" alt="add" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/settings.png" alt="settings" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="rightSecOfHome">
+        <div class="appNameRandom">
+          <a href="">@UserName</a>
+        </div>
+        <form action="">
+          <input
+            class="inputEmail"
+            type="text"
+            placeholder="Enter Website / App Name"
+          />
+          <input
+            class="inputPassword"
+            type="password"
+            placeholder="Enter Password"
+          />
+          <input class="btn" type="submit" value="Add" />
+        </form>
+        <div class="logOutRandom">
+          <a href="">Log Out</a>
+        </div>
+      </div>
+    </main>
+    <%- include("partials/footer") %>
+  </body>
+</html>
