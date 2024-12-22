@@ -1,0 +1,87 @@
+<style>
+  .leftNav {
+    height: 100%;
+    width: 8%;
+    background-color: #0b4199;
+    border-radius: 1rem;
+  }
+
+  .leftNav ul {
+    height: 80%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .leftNav ul li {
+    list-style: none;
+  }
+  .leftNav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .leftNav ul li a img {
+    height: 80%;
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 430px) {
+    .leftNav {
+      height: 10%;
+      width: 80%;
+    }
+    .leftNav ul {
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      margin-top: 0;
+    }
+    .leftNav ul li {
+      height: 70%;
+    }
+    .appNameRandom {
+      width: 60%;
+      padding-left: 2rem;
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 321px) and (max-width: 375px) {
+    .leftNav {
+      width: 70%;
+    }
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 450px) {
+    .leftNav {
+      width: 65% !important;
+    }
+  }
+
+  @media screen and (min-width: 428px) and (max-width: 768px) {
+    .leftNav {
+      width: 13%;
+    }
+  }
+</style>
+
+<div class="leftNav">
+  <ul>
+    <li>
+      <a href=""
+        ><img
+          class="images"
+          src="/images/password-book.png"
+          alt="password-image"
+      /></a>
+    </li>
+    <li>
+      <a href=""><img src="/images/add.png" alt="add" /></a>
+    </li>
+    <li>
+      <a href=""><img src="/images/settings.png" alt="settings" /></a>
+    </li>
+  </ul>
+</div>

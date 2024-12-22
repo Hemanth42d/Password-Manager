@@ -1,0 +1,58 @@
+<style>
+  .dropdown {
+    background-color: #0b4199;
+    width: 60%;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: centers;
+    border-radius: 0.3rem;
+  }
+
+  .dropdown:hover {
+    cursor: pointer;
+  }
+
+  .dropdown button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .dropdowncontent {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    top: 2.6rem;
+    left: 0;
+    background-color: #f5f5dc;
+    color: #0b4199;
+    /* color: white; */
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    min-width: 100%;
+    border-radius: 0.3rem;
+  }
+
+  .arrow img {
+    height: 3vh;
+    cursor: pointer;
+  }
+
+  .dropdown:hover .dropdowncontent {
+    display: block;
+  }
+</style>
+
+<div class="dropdown">
+  <button class="dropdownBtn">Amazon</button>
+  <div class="arrow">
+    <img src="/images/expand-arrow.png" alt="expand arrow" />
+  </div>
+  <div class="dropdowncontent">
+    <p>M.V.Hemanth@2005</p>
+  </div>
+</div>
