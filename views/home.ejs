@@ -16,23 +16,25 @@
       <%- include("partials/leftNav") %>
       <div class="rightSecOfHome">
         <div class="appNameRandom">
-          <a href="">@UserName</a>
+          <a href="/user/settings">@UserName</a>
         </div>
-        <form action="">
+        <form action="/user/store/password">
           <input
-            class="inputEmail"
+            class="text"
             type="text"
             placeholder="Enter Website / App Name"
+            name="websiteName"
           />
           <input
             class="inputPassword"
             type="password"
             placeholder="Enter Password"
+            name="password"
           />
           <input class="btn" type="submit" value="Add" />
         </form>
         <div class="logOutRandom">
-          <a href="">Log Out</a>
+          <a href="/user/logout">Log Out</a>
         </div>
       </div>
     </main>

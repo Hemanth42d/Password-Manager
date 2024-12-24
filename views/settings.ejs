@@ -16,27 +16,39 @@
       <%- include("partials/leftNav") %>
       <div class="rightSecOfHome">
         <div class="appNameRandom">
-          <a href="">@UserName</a>
+          <a href="/user/settings">@UserName</a>
         </div>
         <div class="settingsFormSec">
-          <form action="" class="settingsForm">
-            <input class="inputEmailSettings" type="text" value="username" />
-            <input class="inputEmailSettings" type="email" value="Email" />
+          <form action="/user/settings" class="settingsForm">
+            <input
+              class="inputEmailSettings"
+              type="text"
+              value="username"
+              name="userName"
+            />
+            <input
+              class="inputEmailSettings"
+              type="email"
+              value="Email"
+              name="emial"
+            />
             <input
               class="inputPasswordSettings"
               type="password"
               placeholder="Enter new password"
+              name="newPassword"
             />
             <input
               class="inputPasswordSettings"
               type="inputPassword"
               placeholder="Confirm password"
+              name="password"
             />
             <input class="SettingsBtn" type="submit" value="Change Deatils" />
           </form>
         </div>
         <div class="logOutRandom">
-          <a href="">Log Out</a>
+          <a href="/user/logout">Log Out</a>
         </div>
       </div>
     </main>

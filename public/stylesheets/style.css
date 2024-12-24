@@ -13,13 +13,13 @@ body, html{
 }
 
 main{
-    width: 45%;
+    max-width: 60vw;
     margin: auto;
-    height: 60%;
+    min-height: 62vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     background-color: #0b4199;
     color: white;
 }
@@ -39,14 +39,14 @@ main{
     justify-content: space-evenly;
     width: 87%;
     background-color: #0b4199;
-    height: 15%;
+    min-height: 5vh;
     border-radius: 1rem;
 }
 
 .forms{
-    height: 75%;
+    min-height: 32vh;
     background-color: #0b4199;
-    width: 90%;
+    min-width: 25vw;
     border-radius: 1rem;
     position: relative;
     padding: 0.5rem;
@@ -60,7 +60,7 @@ main{
 
 .rightSec{
     background-color: white;
-    height: 100%;
+    min-height: 45vh;
     border-radius: 1rem;
     display: flex;
     justify-content: space-around;

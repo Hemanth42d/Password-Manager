@@ -20,34 +20,39 @@
             <button class="signUpBtn">Sign up</button>
           </div>
           <div class="forms">
-            <form action="" class="loginForm">
+            <form action="/user/login" class="loginForm" method="post">
               <input
                 class="inputEmail"
                 type="email"
                 placeholder="Enter Your Email Address"
+                name="email"
               />
               <input
                 class="inputPassword"
                 type="password"
                 placeholder="Enter your Password"
+                name="password"
               />
               <input class="btn" type="submit" value="Login" />
             </form>
-            <form action="" class="signUpForm">
+            <form action="/user/register" class="signUpForm" method="post">
               <input
                 class="inputUserName"
                 type="text"
                 placeholder="Enter an username"
+                name="userName"
               />
               <input
                 class="inputEmail"
                 type="email"
                 placeholder="Enter Your Email Address"
+                name="email"
               />
               <input
                 class="inputPassword"
                 type="password"
                 placeholder="Enter your Password"
+                name="password"
               />
               <input class="btn" type="submit" value="Sign Up" />
             </form>
