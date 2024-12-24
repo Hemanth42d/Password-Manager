@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <script
+      src="https://kit.fontawesome.com/f46158d183.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+    <main>
+      <%- include("partials/leftNav") %>
+      <div class="rightSecOfHome">
+        <div class="appNameRandom">
+          <a href="">@UserName</a>
+        </div>
+        <div class="settingsFormSec">
+          <form action="" class="settingsForm">
+            <input class="inputEmailSettings" type="text" value="username" />
+            <input class="inputEmailSettings" type="email" value="Email" />
+            <input
+              class="inputPasswordSettings"
+              type="password"
+              placeholder="Enter new password"
+            />
+            <input
+              class="inputPasswordSettings"
+              type="inputPassword"
+              placeholder="Confirm password"
+            />
+            <input class="SettingsBtn" type="submit" value="Change Deatils" />
+          </form>
+        </div>
+        <div class="logOutRandom">
+          <a href="">Log Out</a>
+        </div>
+      </div>
+    </main>
+    <%- include("partials/footer") %>
+  </body>
+</html>

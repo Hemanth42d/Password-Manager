@@ -114,6 +114,42 @@ main{
     gap: 1rem;
 }
 
+.settingsFormSec{
+    border: 2px solid white;
+    height: 70%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.inputEmailSettings, .inputPasswordSettings{
+    width: 100%;
+    padding: 0.7rem;
+    font-size: medium;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.SettingsBtn{
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.7rem;
+    font-size: medium;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.SettingsBtn:hover{
+    cursor: pointer;
+}
+
 @media screen and (min-width : 200px) and (max-width : 430px ){
     main{
         padding: 0;
@@ -145,6 +181,21 @@ main{
     .dropdownSec{
         width: 80%;
         height: 70%;
+    }
+    .settingsFormSec{
+        width: 80%;
+        height: 75%;
+    }
+    .settingsForm{
+        height: 100%;
+    }
+    .inputEmailSettings, .inputPasswordSettings{
+        width: 90%;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+    .SettingsBtn{
+        font-size: 0.9rem;
     }
 }
 
@@ -188,5 +239,9 @@ main{
     }
     .logOutRandom a {
         padding-left: 2.5rem;
+    }
+    .settingsFormSec{
+        width: 65%;
+        height: 75%;
     }
 }
