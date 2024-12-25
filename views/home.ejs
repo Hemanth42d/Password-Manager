@@ -16,11 +16,11 @@
       <%- include("partials/leftNav") %>
       <div class="rightSecOfHome">
         <div class="appNameRandom">
-          <a href="/user/settings">@UserName</a>
+          <a href="/user/settings">@<%= user.userName %></a>
         </div>
-        <form action="/user/store/password">
+        <form action="/user/store/password" method="post">
           <input
-            class="text"
+            class="inputEmail"
             type="text"
             placeholder="Enter Website / App Name"
             name="websiteName"

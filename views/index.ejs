@@ -3,65 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Manager</title>
+    <title>scatch</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <%- include("partials/header") %>
+    <header>
+      <p class="logo">PasswordManager</p>
+    </header>
     <main>
       <div class="mainContainer">
-        <div class="random">PassWord Manager</div>
-        <div class="leftSec">
-          <p>A palce where you can store your passwords</p>
-        </div>
-        <div class="rightSec">
-          <div class="linksSec">
-            <button class="loginBtn">Login</button>
-            <button class="signUpBtn">Sign up</button>
+        <div class="createAccount">
+          <div class="headingOfCreateAccount">
+            <p class="welcomeText">
+              Welcome to <span class="logoName">Paswword Manager</span>
+            </p>
+            <p class="createAcc">Create your account</p>
           </div>
-          <div class="forms">
-            <form action="/user/login" class="loginForm" method="post">
+          <div class="formSec">
+            <form action="/user/register" method="post">
               <input
-                class="inputEmail"
-                type="email"
-                placeholder="Enter Your Email Address"
-                name="email"
-              />
-              <input
-                class="inputPassword"
-                type="password"
-                placeholder="Enter your Password"
-                name="password"
-              />
-              <input class="btn" type="submit" value="Login" />
-            </form>
-            <form action="/user/register" class="signUpForm" method="post">
-              <input
-                class="inputUserName"
+                class="inputFullname"
                 type="text"
-                placeholder="Enter an username"
+                placeholder="Enter Your Fullname"
                 name="userName"
               />
               <input
                 class="inputEmail"
                 type="email"
-                placeholder="Enter Your Email Address"
+                placeholder="Enter Your Email"
                 name="email"
               />
               <input
                 class="inputPassword"
                 type="password"
-                placeholder="Enter your Password"
+                placeholder="Enter Your Password"
                 name="password"
               />
-              <input class="btn" type="submit" value="Sign Up" />
+              <input
+                class="createbtn"
+                type="submit"
+                value="Create My Account"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="orSec">
+          <p>Or</p>
+        </div>
+        <div class="loginAccount">
+          <div class="headingOfLoginAccount">
+            <p class="loginAccText">Login your account</p>
+          </div>
+          <div class="loginformSec">
+            <form action="/user/login" method="post">
+              <input
+                class="inputEmail"
+                type="email"
+                placeholder="Enter your Email"
+                name="email"
+              />
+              <input
+                class="inputPassword"
+                type="password"
+                placeholder="enter your Password"
+                name="password"
+              />
+              <input class="loginBtn" type="submit" value="Login" />
             </form>
           </div>
         </div>
       </div>
     </main>
-    <%- include("partials/footer") %>
-
-    <script src="/javascripts/link.js"></script>
   </body>
 </html>

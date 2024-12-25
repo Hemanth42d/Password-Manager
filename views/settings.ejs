@@ -16,20 +16,20 @@
       <%- include("partials/leftNav") %>
       <div class="rightSecOfHome">
         <div class="appNameRandom">
-          <a href="/user/settings">@UserName</a>
+          <a href="/user/settings">@<%= user.userName %></a>
         </div>
         <div class="settingsFormSec">
           <form action="/user/settings" class="settingsForm">
             <input
               class="inputEmailSettings"
               type="text"
-              value="username"
+              value="<%= user.userName %>"
               name="userName"
             />
             <input
               class="inputEmailSettings"
               type="email"
-              value="Email"
+              value="<%= user.email %>"
               name="emial"
             />
             <input
