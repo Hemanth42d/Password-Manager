@@ -11,12 +11,5 @@
       "src": "/(.*)",
       "dest": "/script.js"
     }
-  ],
-  
-  "functions": {
-    "api/test.js": {
-      "memory": 3009,
-      "maxDuration": 30
-    }
-  }
+  ]
 }
