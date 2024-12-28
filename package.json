@@ -4,7 +4,6 @@
   "description": "An application for storing the passwords of some of the websites login details",
   "main": "script.js",
   "scripts": {
-    "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
