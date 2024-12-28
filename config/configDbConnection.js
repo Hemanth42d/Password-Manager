@@ -4,6 +4,7 @@ const config = require("config");
 const connection = mongoose
     .connect(`${config.get("MONGODB_URI")}/passwordManager`)
     .then(()=>{
+        console.log("connected");
     })
     .catch((err)=>{
         console.log(err)

@@ -17,25 +17,41 @@ router.post("/login", loginUser);
 router.get("/logout", logoutUser);
 
 router.get("/home", isLoggedIn, async (req,res) => {
-    let user = await userModel.findOne({ email : req.user.email });
-    res.render("home", { user });
+    try{
+        let user = await userModel.findOne({ email : req.user.email });
+        res.render("home", { user });
+    }catch(err){
+        res.send(err);
+    }
 })
 
 router.get("/passwords", isLoggedIn, async (req,res) => {
-    let passwordsDetails = await userModel.findOne({ email : req.user.email }).populate("passwords");
-    res.render("passwords", { passwordsDetails });
+    try{
+        let passwordsDetails = await userModel.findOne({ email : req.user.email }).populate("passwords");
+        res.render("passwords", { passwordsDetails });
+    }catch(err){
+        res.send(err);
+    }
 })
 
 router.post("/store/password", isLoggedIn, storePassword);
 
 router.get("/settings", isLoggedIn, async (req,res) => {
-    let user = await userModel.findOne({ email : req.user.email });
-    res.render("settings", { user });
+    try {
+        let user = await userModel.findOne({ email : req.user.email });
+        res.render("settings", { user });
+    } catch (error) {
+        res.send(error)
+    }
 })
 
 router.get("/delete/:id", isLoggedIn, async (req,res) => {
-    let passwordsDetails = await passwordModel.findOneAndDelete({ _id : req.params.id });
-    res.redirect("/user/passwords");
+    try {
+        let passwordsDetails = await passwordModel.findOneAndDelete({ _id : req.params.id });
+        res.redirect("/user/passwords");
+    } catch (error) {
+        res.send(error.message);
+    }
 })
 
 router.post("/settings/changeDetails", isLoggedIn, changeDetails);
