@@ -19,29 +19,27 @@
           <a href="/user/settings">@<%= user.userName %></a>
         </div>
         <div class="settingsFormSec">
-          <form action="/user/settings" class="settingsForm">
+          <form
+            action="/user/settings/changeDetails"
+            class="settingsForm"
+            method="post"
+          >
             <input
               class="inputEmailSettings"
               type="text"
-              value="<%= user.userName %>"
+              placeholder="Enter user name"
               name="userName"
             />
             <input
               class="inputEmailSettings"
               type="email"
-              value="<%= user.email %>"
-              name="emial"
+              placeholder="Enter email/new Email"
+              name="email"
             />
             <input
               class="inputPasswordSettings"
               type="password"
               placeholder="Enter new password"
-              name="newPassword"
-            />
-            <input
-              class="inputPasswordSettings"
-              type="inputPassword"
-              placeholder="Confirm password"
               name="password"
             />
             <input class="SettingsBtn" type="submit" value="Change Deatils" />

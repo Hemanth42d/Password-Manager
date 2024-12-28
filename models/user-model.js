@@ -4,10 +4,14 @@ const connection = require("../config/configDbConnection");
 const userSchema = mongoose.Schema({
     userName : String,
     email : String,
-    password : String,
+    password : {
+        type  : String,
+        required : true
+    },
     passwords : [
         {
             type : mongoose.Types.ObjectId,
+            ref : "password",
             default : []
         }
     ]
