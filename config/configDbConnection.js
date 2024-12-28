@@ -10,4 +10,4 @@ const connection = mongoose
         console.log(err)
     })
 
-module.exports.connection;
+module.exports = connection;
