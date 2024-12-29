@@ -3,13 +3,8 @@ const path = require("path");
 const indexRouter = require("./routes/indexRouter.js");
 const usersRouter = require("./routes/userRoutes.js");
 const cookieParser = require("cookie-parser");
-const connectToDatabase = require("./config/configDbConnection.js");
 
 const port = 3000;
-
-(async () => {
-    await connectToDatabase();
-})();
 
 const app = express();
 require('dotenv').config();
