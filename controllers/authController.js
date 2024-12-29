@@ -89,8 +89,6 @@ module.exports.changeDetails = async (req,res) => {
                 res.cookie("token", "");
                 let token = generateToken(user);
                 res.cookie("token", token);
-                res.redirect("/user/home");
-
                 res.render("settings", { user });
             })
         })

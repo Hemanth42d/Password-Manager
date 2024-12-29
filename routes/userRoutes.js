@@ -48,6 +48,7 @@ router.get("/settings", isLoggedIn, async (req,res) => {
 router.get("/delete/:id", isLoggedIn, async (req,res) => {
     try {
         let passwordsDetails = await passwordModel.findOneAndDelete({ _id : req.params.id });
+        let user = await userModel.findOne({ email : req.user.email });
         res.redirect("/user/passwords");
     } catch (error) {
         res.send(error.message);
