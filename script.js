@@ -4,7 +4,7 @@ const indexRouter = require("./routes/indexRouter.js");
 const usersRouter = require("./routes/userRoutes.js");
 const cookieParser = require("cookie-parser");
 
-const port = 5050;
+const port = 3000;
 
 const app = express();
 require('dotenv').config();
