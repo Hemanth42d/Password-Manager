@@ -8,12 +8,12 @@ module.exports.registerUser = async (req,res) => {
     try {
         let { email , password, userName } = req.body;
         let user = await userModel.findOne({ email });
-        if(user) return res.status(401).send("You already have an account, please login");
+        if(user) return res.status(304).send("You already have an account, please login");
 
         bcrypt.genSalt(10, (err,salt) =>{
-            if(err) return res.send(err);
+            if(err) return res.status(101).send(err);
             bcrypt.hash(password, salt, async (err,hash) =>{
-                if(err) return res.send(err);
+                if(err) return res.status(101).send(err);
                 let user = await userModel.create({
                     email ,
                     password : hash,
@@ -25,7 +25,7 @@ module.exports.registerUser = async (req,res) => {
             })
         })
     } catch (error) {
-        res.send(error);
+        res.status(101).send(error);
     }
 }
 
@@ -35,18 +35,20 @@ module.exports.loginUser = async (req,res) => {
         let user = await userModel.findOne({ email });
         if(!user) return res.status(401).send("Something went wrong");
         bcrypt.compare(password, user.password, (err,result) => {
+            if(err) res.status(101).send(err);
             bcrypt.compare(password, user.password, (err, result) => {
+                if(err) res.status(101).send(err);
                 if(result){
                     let token = generateToken(user);
                     res.cookie("token", token);
                     res.redirect("/user/home");
                 }else{
-                    res.send("Email or password is incorrect")
+                    res.status(101).send("Email or password is incorrect")
                 }
             });
         });
     } catch (error) {
-        res.send(error.message);
+        res.status(101).send(error.message);
     }
 }
 
@@ -64,7 +66,7 @@ module.exports.storePassword = async (req,res) => {
         await user.save();
         res.redirect("/user/home");
     } catch (error) {
-        res.send(error.message);
+        res.status(101).send(error.message);
     }
 }
 module.exports.changeDetails = async (req,res) => {
@@ -72,10 +74,8 @@ module.exports.changeDetails = async (req,res) => {
         let { userName, email, password } = req.body;
         bcrypt.genSalt(10, (err,salt) => {
             if(err) return res.status(505).send(err.message);
-
             bcrypt.hash(password, salt, async (err,hash) => {
                 if(err) return res.status(505).send(err.message);
-
                 let user = await userModel.findOneAndUpdate(
                     { email : req.user.email },
                     {
@@ -93,7 +93,7 @@ module.exports.changeDetails = async (req,res) => {
             })
         })
     } catch (error) {
-        res.send(error.message);
+        res.status(101).send(error.message);
     }
 }
 

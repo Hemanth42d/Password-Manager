@@ -21,7 +21,7 @@ router.get("/home", isLoggedIn, async (req,res) => {
         let user = await userModel.findOne({ email : req.user.email });
         res.render("home", { user });
     }catch(err){
-        res.send(err);
+        res.status(101).send(err);
     }
 })
 
@@ -30,7 +30,7 @@ router.get("/passwords", isLoggedIn, async (req,res) => {
         let passwordsDetails = await userModel.findOne({ email : req.user.email }).populate("passwords");
         res.render("passwords", { passwordsDetails });
     }catch(err){
-        res.send(err);
+        res.status(101).send(err);
     }
 })
 
@@ -41,7 +41,7 @@ router.get("/settings", isLoggedIn, async (req,res) => {
         let user = await userModel.findOne({ email : req.user.email });
         res.render("settings", { user });
     } catch (error) {
-        res.send(error)
+        res.status(101).send(error)
     }
 })
 
@@ -51,7 +51,7 @@ router.get("/delete/:id", isLoggedIn, async (req,res) => {
         let user = await userModel.findOne({ email : req.user.email });
         res.redirect("/user/passwords");
     } catch (error) {
-        res.send(error.message);
+        res.status(101).send(error.message);
     }
 })
 
