@@ -4,8 +4,6 @@ const indexRouter = require("./routes/indexRouter.js");
 const usersRouter = require("./routes/userRoutes.js");
 const cookieParser = require("cookie-parser");
 
-const port = 8000;
-
 const app = express();
 require('dotenv').config();
 
@@ -19,6 +17,6 @@ app.use(cookieParser());
 app.use("/", indexRouter);
 app.use("/user", usersRouter);
 
-app.listen(port, () => {
-    console.log(`Port is running at https://localhost:${port}`);
+app.listen(3000, () => {
+    console.log(`Port is running at https://localhost:${3000}`);
 });
