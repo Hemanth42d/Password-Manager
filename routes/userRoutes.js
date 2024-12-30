@@ -7,7 +7,11 @@ const userModel = require("../models/user-model");
 const passwordModel = require("../models/password-model");
 
 router.get("/",  (req,res) => {
-    res.render("home");
+    try {
+        res.render("home");
+    } catch (error) {
+        res.status(101).send(error);
+    }
 });
 
 router.post("/register", registerUser);

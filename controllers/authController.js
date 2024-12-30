@@ -99,7 +99,11 @@ module.exports.changeDetails = async (req,res) => {
 
 
 module.exports.logoutUser = (req,res) => {
-    let token = "";
-    res.cookie("token", token);
-    res.redirect("/");
+    try {
+        let token = "";
+        res.cookie("token", token);
+        res.redirect("/");
+    } catch (error) {
+        res.status(101).send(error.message);
+    }
 }
