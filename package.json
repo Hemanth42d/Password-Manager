@@ -4,7 +4,7 @@
   "description": "An application for storing the passwords of some of the websites login details",
   "main": "script.js",
   "engines": {
-    "node": "18.X"
+    "node": "22.X"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
